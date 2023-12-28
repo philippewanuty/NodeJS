@@ -1,15 +1,19 @@
 {
-  "name": "api",
-  "version": "1.0.0",
-  "description": "Primeiro projeto NodeJS desenvolvido no programa Explorer da Rocktseat",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./src/server.js"
-  },
-  "keywords": [],
-  "author": "Philippe Costa",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  }
+	"name": "api",
+	"version": "1.0.0",
+	"description": "Primeiro projeto NodeJS desenvolvido no programa Explorer da Rocktseat",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./src/server.js",
+		"dev": "nodemon ./src/server.js"
+	},
+	"keywords": [],
+	"author": "Philippe Costa",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"nodemon": "^3.0.2"
+	}
 }

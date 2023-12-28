@@ -37,15 +37,26 @@ Ele é um ambiente que oferece recursos que permite escrever e executar aplicaç
 
   Obs: por padrão o navegador só aceita o método GET, para usar os outros métodos precisamos usar uma ferramenta externa.(insomnia)
 
-## Route Params
+## Método GET
 
-São utilizados para informações simples.
-ex: id de um produto.
+  # Route Params
 
- http://seusite.com/caminho/params
- ex: request.params.id
- const {id, user} = request.params
+  São utilizados para informações simples.
+  ex: id de um produto.
 
- ## Query Params
+  http://seusite.com/caminho/params
+  ex: request.params.id
+  const {id, user} = request.params
 
-  http://seusite.com/user/?page=2&limit=10
+  # Query Params
+
+    http://seusite.com/user/?page=2&limit=10
+
+## Método POST
+
+recupera os valores enviados pelo corpo da requisição.
+
+necessita colocar informação para cada tipo de arquivo que irá ser realizado. => app.use(express.json()); - neste exemplo estamos utilizando o json.
+
+respondemos a API pelo padrão JSON
+
