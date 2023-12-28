@@ -19,7 +19,7 @@ Ele é um ambiente que oferece recursos que permite escrever e executar aplicaç
 
 -npm init -y
 
-- instalar o Express
+- instalar o Express (gerencia as requisições HTTP)
 
   -npm i express --save
 
@@ -27,3 +27,25 @@ Ele é um ambiente que oferece recursos que permite escrever e executar aplicaç
 
   -Dentro colocar o que será ignorado
   -node_modules
+
+## Metodos de requisições (verbos http)
+  -GET => Leitura
+  -POST => Criação
+  -PUT => Atualização - atualizar um produto
+  -DELETE => Deleção - deletar algo
+  -PATCH => Atualização parcial/especifica
+
+  Obs: por padrão o navegador só aceita o método GET, para usar os outros métodos precisamos usar uma ferramenta externa.(insomnia)
+
+## Route Params
+
+São utilizados para informações simples.
+ex: id de um produto.
+
+ http://seusite.com/caminho/params
+ ex: request.params.id
+ const {id, user} = request.params
+
+ ## Query Params
+
+  http://seusite.com/user/?page=2&limit=10
