@@ -60,3 +60,42 @@ necessita colocar informação para cada tipo de arquivo que irá ser realizado.
 
 respondemos a API pelo padrão JSON
 
+## HTTP Codes(status codes) => Imagem adicionada em ../assets
+
+  Adiciona uma numeração as respostas, estão agrupados por faixas numéricas
+
+  1xx - Informativo
+    102 => Processando
+
+  2xx - Sucesso
+    200 => Requisição bem sucedida - OK
+    201 => Created - geralmente utilizado para POST após uma inserção
+
+  3xx - Redirecionamento
+    301 =>Moved permanently
+    302 => Moved
+
+  4xx - Erro do cliente
+    400 => Bad request
+    401 => Unauthorized
+    404 => Not found
+
+  5xx - Erro do servidor
+    500 => Internal server error.
+
+## Middleware
+
+  Middleware são funções que tem acesso ao objeto de
+  solicitação (requisição), o objeto de resposta (resposta), e a
+  próxima função de middleware no ciclo solicitação-resposta do
+  aplicativo.
+  A próxima função middleware é comumente denotada por uma
+  variável chamada next.
+
+ Middleware podem
+  -Executar qualquer código.
+  -Fazer mudanças nos objetos de solicitação e resposta.
+  -Encerrar o ciclo de solicitação-resposta.
+  -Chamaro próximo middleware na pilha.
+
+  Ex: permitir ou não certo usuário cadastrar um produto.
