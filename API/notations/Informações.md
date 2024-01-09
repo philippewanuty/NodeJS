@@ -12,8 +12,8 @@ Ele é um ambiente que oferece recursos que permite escrever e executar aplicaç
 - Backend
 - Frontend
 - Micro serviços
--API
--Script e Automação
+- API
+- Script e Automação
 
 ## iniciando um projeto Node JS
 
@@ -82,6 +82,7 @@ respondemos a API pelo padrão JSON
 
   5xx - Erro do servidor
     500 => Internal server error.
+    502 => Bad Getway
 
 ## Middleware
 
@@ -96,6 +97,14 @@ respondemos a API pelo padrão JSON
   -Executar qualquer código.
   -Fazer mudanças nos objetos de solicitação e resposta.
   -Encerrar o ciclo de solicitação-resposta.
-  -Chamaro próximo middleware na pilha.
+  -Chamar o próximo middleware na pilha.
 
   Ex: permitir ou não certo usuário cadastrar um produto.
+
+  ## Tratamento de exceções
+
+    instalar a lib Express Async Error
+      npm install express-async-errors --save
+
+      fazer a exportação do async errors no começo do server
+        require("express-async-errors");

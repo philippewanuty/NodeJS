@@ -6,15 +6,18 @@ const usersController = new UsersController();
 
 const usersRoutes = Router();
 
-function myMiddleware(request, response, next) {
+//Middleware
+// function myMiddleware(request, response, next) {
+//   console.log('Voce passou pelo middleware');
 
+//   if(!request.body.isAdmin) {
+//     return response.json({Message: "User unauthorized"});
+//   }
   
-}
+  
+//   next();
 
-
-
-
-
+// }
 
 
 

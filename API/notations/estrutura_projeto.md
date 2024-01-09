@@ -8,3 +8,5 @@
 *controllers* - Pasta => Processa as requisições da aplicação
   Ex: verificar se o usuário existe, cadastrar um produto.. etc
   Obs: só pode ter no máximo 5 métodos.
+
+*utils* - tratamento de excesções
