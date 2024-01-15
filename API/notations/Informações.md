@@ -108,3 +108,5 @@ respondemos a API pelo padrão JSON
 
       fazer a exportação do async errors no começo do server
         require("express-async-errors");
+
+
