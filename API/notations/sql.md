@@ -11,18 +11,18 @@
     Insere novos registros em uma tabela.
     INSERT INTO table_name (column1, column2) VALUES (value1, value2);
 
--- **SELECT:** 
+-- **SELECT:**  (sempre usar o WHERE)
 
     Recupera dados de uma ou mais tabelas.
     SELECT column1, column2 FROM table_name WHERE condition;
 
 
--- **UPDATE:** 
+-- **UPDATE:**  (sempre usar o WHERE)
 
     Atualiza registros existentes em uma tabela.
-    UPDATE table_name SET column1 = value1 WHERE condition;
+    UPDATE table_name SET column1 = value1 WHERE id = 1;
 
--- **DELETE:** 
+-- **DELETE:** (sempre usar o WHERE)
 
     Remove registros de uma tabela.
     DELETE FROM table_name WHERE condition;
@@ -56,7 +56,7 @@
     Retorna valores distintos de uma coluna.
     SELECT DISTINCT column1 FROM table_name;
 
--- **WHERE:** 
+-- **WHERE:** (IMPORTANTE!!!)
 
     Filtra registros em conjunto com SELECT, UPDATE e DELETE.
     SELECT column1, column2 FROM table_name WHERE condition;
@@ -85,3 +85,28 @@
 **VER DADOS NA TABELA**
 
     SELECT * FROM users(selecione apenas)
+
+
+**EXEMPLO CRUDE BANCO DE DADOS**
+
+    INSERT INTO users 
+    (name, email, password)
+      
+    VALUES 
+      ('Costa', 'contact3@philippewanuty.com', '12347')
+
+
+
+    SELECT * FROM users;
+    SELECT id, name, email FROM users;
+
+
+    UPDATE users SET 
+    avatar = 'wanuty.png'
+    WHERE id = 2
+
+
+    DELETE FROM users
+
+    WHERE id = 3
+
