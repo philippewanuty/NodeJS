@@ -110,3 +110,15 @@ respondemos a API pelo padrão JSON
         require("express-async-errors");
 
 
+## Criptografar dados
+    Criptografar a senha pelo método hash
+
+    - importar o método dentro de usercontroller
+
+    -criar uma variável chamando o método. 
+
+    (const hashedPassword = await hash(password, 8))
+
+    -substituir a variável escolhida pela variavel hash
+
+

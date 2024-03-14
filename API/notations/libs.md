@@ -15,3 +15,8 @@ npm install express-async-errors --save
 
         SGBD => Sistema Gerenciador de banco de dados.
         Beekeeper => para visualisar o banco de dados.
+
+## Criptografar dados
+
+npm install bcryptjs 
+(consultar informações)
