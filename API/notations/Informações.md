@@ -7,6 +7,12 @@ API - Application programming interface, ou uma interface de programação de ap
 
 Ele é um ambiente que oferece recursos que permite escrever e executar aplicações Javascript (JS Runtime Enviroment)
 
+## O que é NPM e NPX?
+
+    NPM é uma ferramenta que se usa para instalar pacotes
+    
+    NPX é uma ferramenta que se usa para executar pacotes
+
 ## Onde pode ser utilizado ?
 
 - Backend
@@ -120,5 +126,7 @@ respondemos a API pelo padrão JSON
     (const hashedPassword = await hash(password, 8))
 
     -substituir a variável escolhida pela variavel hash
+
+    -  de senhas usar o método -> Compare (importar)
 
 

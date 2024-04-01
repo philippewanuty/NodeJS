@@ -90,3 +90,7 @@ Em SQL (Structured Query Language), os tipos de dados são usados para definir o
         - CREATE
         - DROP
         - ALTER
+
+**FUNÇÕES BANCO DE DADOS**
+
+        DATETIME('now') -> Exibe a data atual

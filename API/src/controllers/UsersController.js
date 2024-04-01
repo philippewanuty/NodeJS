@@ -6,7 +6,7 @@ No máximo 5 métodos abaixo
 * update - PUT  para atualiazar um registro.
 * delete - DELETE para remover um registro.
 */
-const { hash } = require('bcryptjs');
+const { hash, compare } = require('bcryptjs');
 const AppError = require('../utils/AppError');
 const sqliteConnection = require('../database/sqlite');
 
@@ -30,7 +30,7 @@ class UsersController {
 	}
 
 	async update(request, response) {
-		const { name, email } = request.body;
+		const { name, email, password, old_password } = request.body;
 		const { id } = request.params;
 
 		const database = await sqliteConnection();
@@ -47,18 +47,32 @@ class UsersController {
 			throw new AppError('Este e-mail ja está em uso.');
 		}
 
-		user.name = name;
-		user.email = email;
+		user.name = name ?? user.name; // usar o ??  quando vazio permanecer o conteúdo.
+		user.email = email ?? user.email;
+
+		if (password && !old_password) {
+			throw new AppError('Você precisa informar a senha antiga para definir a nova senha.');
+		}
+
+		if (password && old_password) {
+			const CheckOldPassword = await compare(old_password, user.password);
+
+			if (!CheckOldPassword) {
+				throw new AppError('A senha antiga não confere');
+			}
+
+			user.password = await hash(password, 8);
+		}
 
 		await database.run(
 			`
-    
-    UPDATE users SET
-    name = ?,
-    email = ?,
-    updated_at = ?
-    WHERE id = ?`,
-			[user.name, user.email, new Date(), id]
+			UPDATE users SET
+			name = ?,
+			email = ?,
+			password = ?,
+			updated_at = DATETIME('now')
+			WHERE id = ?`,
+			[user.name, user.email, user.password, id]
 		);
 
 		return response.json();

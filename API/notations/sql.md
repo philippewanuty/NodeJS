@@ -35,6 +35,10 @@ _É a linguagem padrão para banco de dados relacionais, o conhecimento aprendid
 
 _Lembrar do auto incremento(adiciona sozinho os ids) e do primary key (torna os id únicos)_
 
+**Primary Key: chave primária e única em uma tabela.**
+
+**Foreign key: chave vinda de outra tabela, vincula a tabela de onde foi gerada**
+
 -- **INSERT:**
 
     Insere novos registros em uma tabela.
