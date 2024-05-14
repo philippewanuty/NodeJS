@@ -160,4 +160,4 @@ _Lembrar do auto incremento(adiciona sozinho os ids) e do primary key (torna os 
 
 **Lembrar de no beekeeper selecionar a linha de codigo que voce deseja dar Run**
 
-## MIGRATIONS
+

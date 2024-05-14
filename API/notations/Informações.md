@@ -21,6 +21,14 @@ Ele é um ambiente que oferece recursos que permite escrever e executar aplicaç
 - API
 - Script e Automação
 
+## Frameworks para backend
+
+Framework Web: Existem muitos frameworks web disponíveis que facilitam a criação de APIs RESTful:
+- Spring Boot (Java) 
+- Flask (Python)
+- Express.js (Node.js)
+- Laravel (PHP), entre outros.
+
 ## iniciando um projeto Node JS
 
 -npm init -y
