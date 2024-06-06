@@ -1,5 +1,5 @@
-/**  O uso do class é devido que pode ser utilizado varias funções. 
-No máximo 5 métodos abaixo
+/**  O uso do class é devido a permissão de ser utilizado dentro dela várias funções. 
+Um controller pode ter no máximo 5 métodos(funções):
 * index - GET  para listar varios registros.
 * show - GET para exibir um registro específico.
 * create - POST para criar um registro.
@@ -11,6 +11,7 @@ const AppError = require('../utils/AppError');
 const sqliteConnection = require('../database/sqlite');
 
 class UsersController {
+	
 	async create(request, response) {
 		const { name, email, password } = request.body;
 
